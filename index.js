@@ -41,6 +41,7 @@ bot.on('message', (msg) => {
             const needZero = num => num > 9 ? `${num}` : `0${num}`;
 
             bot.sendMessage(chatId, `wake up, you have almost ${needZero(parseInt((deadline-msg.date)/3600))}:${needZero(parseInt((deadline-msg.date)%3600/60))}:${needZero(parseInt((deadline-msg.date)%60))}`);
+            break;
         default: bot.sendMessage(chatId, 'hello');
 
     }
